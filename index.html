@@ -19,7 +19,12 @@
     <a href="#faq">FAQ</a>
   </nav>
 
-  <a href="#acheter" class="nav-button">Découvrir</a>
+  <div class="header-actions">
+    <a href="#acheter" class="nav-button">Découvrir</a>
+    <button class="cart-button" onclick="toggleCart()">
+      🛒 Panier <span id="cart-count">0</span>
+    </button>
+  </div>
 </header>
 
 <section class="hero">
@@ -327,6 +332,42 @@
   </div>
 
 </footer>
+
+
+<!-- PANIER -->
+
+<div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+<div id="cart" class="cart">
+
+  <div class="cart-header">
+    <h2>Votre panier</h2>
+    <button onclick="toggleCart()">✕</button>
+  </div>
+
+  <div id="cart-items">
+
+    <div class="empty-cart">
+      Votre panier est vide.
+    </div>
+
+  </div>
+
+  <div class="cart-footer">
+
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cart-total">0,00 €</strong>
+    </div>
+
+    <button class="checkout-button" onclick="checkout()">
+      Passer la commande
+    </button>
+
+  </div>
+
+</div>
+
 
 <script src="script.js"></script>
 
